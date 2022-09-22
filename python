@@ -1,0 +1,21 @@
+from flask import Flask
+
+app = Flask(__name__)
+
+
+@app.route('/prog/pow/<num1>/<num2>')
+def pow(num1, num2):  # put application's code here
+    return str(int(num1) ** int(num2))
+@app.route('/prog/add/<num1>/<num2>')
+def add(num1, num2):  # put application's code here
+    return str(int(num1)+int(num2))
+@app.route('/prog/mult/<num1>/<num2>')
+def mult(num1, num2):  # put application's code here
+    return str(int(num1)*int(num2))
+@app.route('/prog/div/<num1>/<num2>')
+def div(num1, num2):  # put application's code here
+    return str(int(num1) / int(num2))
+
+@app.route('/prog/rest/<num1>/<num2>')
+def rest(num1, num2):  # put application's code here
+    return str(int(num1) - int(num2))
